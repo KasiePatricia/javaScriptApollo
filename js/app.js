@@ -49,10 +49,10 @@ division(17,3);
 function solve(a, b, c) {
   let result = (-1 * b + Math.sqrt(Math.pow(b, 2) - (4 * a * c))) / (2 * a);
   let result2 = (-1 * b - Math.sqrt(Math.pow(b, 2) - (4 * a * c))) / (2 * a);
-  return result + "<br>" + result2;
+  return result + " " + result2;
 }
 
-document.write(solve(1, 1, -1));
+console.log(solve(1, 1, -1));
 
 // 7
 const myNoun = "dog";
@@ -80,7 +80,7 @@ r = 17.5
 
 SI = (p*t*r)/100;
 
-document.write("Simple Interest = " + SI);
+console.log(SI);
 
 // 10
 division(10,4);
