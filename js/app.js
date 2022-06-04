@@ -1,5 +1,6 @@
 // 1
-document.getElementById("header").style.color = "#c40";
+document.getElementById("header").innerHTML = "Team Apollo"
+document.querySelector(".group-name").style.color = "#c40";
 
 // 2
 const teamNames = [
@@ -39,17 +40,17 @@ console.log(`She ${verb} a ${adjective} meal.`);
 console.log(`${noun}'s father is a ${adjective} man`);
 
 // 5
-function division(num1, num2) {
-  console.log(num1 % num2);
+ remainder = (num1, num2) => {
+  return (num1 % num2);
 }
 
-division(17,3);
+console.log(remainder(17, 3));
 
 // 6
 function solve(a, b, c) {
   let result = (-1 * b + Math.sqrt(Math.pow(b, 2) - (4 * a * c))) / (2 * a);
   let result2 = (-1 * b - Math.sqrt(Math.pow(b, 2) - (4 * a * c))) / (2 * a);
-  return result + " " + result2;
+  return "The first root of the quaratic equation is " + result + " while the second root of the quaratic equation is " + result2;
 }
 
 console.log(solve(1, 1, -1));
@@ -59,18 +60,19 @@ const myNoun = "dog";
 const myAdjedtive = "big";
 const myVerb = "ran";
 const myAdverb = "quickly";
-const wordBlanks = "to the owner";
 
-console.log(`The ${myAdjedtive} ${myNoun} ${myVerb} ${myAdverb} ${wordBlanks}`);
+const wordBlanks = "The " + myAdjedtive + " " + myNoun + " " + myVerb + " " + myAdverb + " to the owner.";
+
+console.log(wordBlanks);
 
 // 8
 
-function calcArea(radius){
-  let area = 3.142 * radius**2;
-  console.log(area);
+areaOfCircle = (radius) => {
+  let solution = (3.142 * (radius**2));
+  return solution;
 }
 
-calcArea(9);
+console.log("Area of Circle = " + areaOfCircle(9));
 
 // 9
 let p, t, r, SI;
@@ -83,4 +85,38 @@ SI = (p*t*r)/100;
 console.log(SI);
 
 // 10
-division(10,4);
+console.log(remainder(10, 4));
+
+//11
+//for data one
+
+meritMass1 = 78;
+meritHeight1 = 1.69;
+
+nutjobMass1 = 92;
+nutjobHeight1 = 1.95;
+
+let meritBmi1 = (meritMass1/(meritHeight1**2));
+console.log(meritBmi1)
+
+let nutjobBmi1 = (nutjobMass1/(nutjobHeight1**2));
+console.log(nutjobBmi1)
+
+let meritHigherBMI1 = (meritBmi1 > nutjobBmi1)
+console.log("Is Merit BMI? " + meritHigherBMI1)
+
+//for test data 2
+meritMass2 = 95;
+meritHeight2 = 1.88;
+
+nutjobMass2 = 85;
+nutjobHeight2 = 1.76;
+
+let meritBmi2 = (meritMass2/(meritHeight2**2));
+console.log(meritBmi2)
+
+let nutjobBmi2 = (nutjobMass2/(nutjobHeight2**2));
+console.log(nutjobBmi2)
+
+let meritHigherBMI2 = (meritBmi2 > nutjobBmi2)
+console.log("Is Merit BMI? " + meritHigherBMI2)
